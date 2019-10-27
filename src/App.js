@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+    
+      <div className="card" style={{maxWidth:'320px'}}>
+        <img className="card-img-top" src={"https://www.ideiasdecor.com/wp-content/uploads/2018/09/plantas-de-casas-57.jpg"}/>
+
+        <div className="card-block">
+
+          <h3 className="card-title">TITULO</h3>
+          <p className="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          <a href="#" className="btn btn-outline-info">Contatar anunciante</a>
+        </div>
+      </div>
+
+
+
+
+
     </div>
   );
 }
