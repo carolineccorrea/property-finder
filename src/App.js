@@ -33,19 +33,20 @@ class App extends Component {
 
 {this.state.nutri.map((item)=>{
   return(
-  <article key={item.id}> 
-    <div className="card" style={{maxWidth:'320px'}}>
-    <img className="card-img-top" src={item.image}/>
-
-    <div className="card-block">
-
-      <h3 className="card-title">{item.title}</h3>
-      <p className="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-      <a href="#" className="btn btn-outline-info">Contatar anunciante</a>
+    <article key={item.id}> 
+      <div className="card" style={{maxWidth:'320px'}}>
+      <img className="card-img-top" src={item.image}/>
+  
+      <div className="card-block">
+  
+        <h3 className="card-title">{item.title}</h3>
+        <h5 className="" style={{color:'green'}}>${item.value}</h5>
+        <p className="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+        <a href="#" className="btn btn-outline-info">Contatar anunciante</a>
+      </div>
     </div>
-  </div>
-  </article> 
-  );
+    </article> 
+    );
 
 })}
 
