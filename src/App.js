@@ -1,21 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './components/Header';
 
-function App() {
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      nutri: []
+    };
+  }
+
+  componentDidMount(){
+    let url = 'https://my-json-server.typicode.com/eduardobvale/demo/rentals';
+    fetch(url)
+    .then((r)=>r.json())
+    .then((json)=>{
+      let state = this.state;
+      state.nutri = json;
+      this.setState(state);
+      console.log(json);
+    })
+
+  }
+
+
+  render() {
   return (
     <div>
       <Header/>
     
-      <div className="card" style={{maxWidth:'320px'}}>
-        <img className="card-img-top" src={"https://www.ideiasdecor.com/wp-content/uploads/2018/09/plantas-de-casas-57.jpg"}/>
+      <div className="container">
 
-        <div className="card-block">
+{this.state.nutri.map((item)=>{
+  return(
+  <article key={item.id}> 
+    <div className="card" style={{maxWidth:'320px'}}>
+    <img className="card-img-top" src={item.image}/>
 
-          <h3 className="card-title">TITULO</h3>
-          <p className="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <a href="#" className="btn btn-outline-info">Contatar anunciante</a>
-        </div>
-      </div>
+    <div className="card-block">
+
+      <h3 className="card-title">{item.title}</h3>
+      <p className="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      <a href="#" className="btn btn-outline-info">Contatar anunciante</a>
+    </div>
+  </div>
+  </article> 
+  );
+
+})}
+
+</div>
+
+
 
 
 
@@ -23,6 +59,7 @@ function App() {
 
     </div>
   );
+}
 }
 
 export default App;
