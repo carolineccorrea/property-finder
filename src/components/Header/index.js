@@ -6,15 +6,15 @@ function Header() {
     <div className="container-fluid">
         <nav className="navbar navbar-expand-md navbar-light bg-light" style={{backgroundColor: '#e3f2fd'}}>
 
-          <a className="navbar-brand" href="#">
-          <img className="image-responsive" style={{maxWidth:'150px'}} src={logo}/>
+          <a className="navbar-brand" href="/#">
+          <img className="image-responsive" style={{maxWidth:'150px'}} src={logo} alt=""/>
         </a>
 
          <section className="collapse navbar-collapse" id="navbarToggler">
           <div className="navbar-nav ml-auto">
-            <a className="navbar-item nav-link" href="#">Cadastro</a>
-            <a className="navbar-item nav-link" href="#">Anunciar imóvel</a>
-            <a className="navbar-item nav-link" href="#">Ajuda</a>
+            <a className="navbar-item nav-link" href="/#">Cadastro</a>
+            <a className="navbar-item nav-link" href="/#">Anunciar imóvel</a>
+            <a className="navbar-item nav-link" href="/#">Ajuda</a>
             <button type="button" class="btn btn-outline-info">Entrar</button>
             </div>
           </section>
