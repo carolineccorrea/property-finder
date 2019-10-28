@@ -30,8 +30,8 @@ class Card extends Component {
       {this.state.nutri.map((item)=>{
         return(
           <article key={item.id}> 
-            <div className="card" style={{maxWidth:'320px'}}>
-            <img className="card-img-top" src={item.image} alt=""/>
+            <div className="card" >
+            <img className="card-img-top" src={item.image} style={{maxWidth:'420px', maxHeight:'300px'}} alt=""/>
         
             <div className="card-block">
         

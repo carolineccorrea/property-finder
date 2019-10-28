@@ -9,7 +9,9 @@ class App extends Component {
   return (
     <div>
       <Header/>
+      <div className="card-columns">
       <Card/>
+      </div>
       
   
     </div>
