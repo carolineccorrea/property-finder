@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 
 class Card extends Component {
@@ -8,19 +9,14 @@ class Card extends Component {
           nutri: []
         };
       }
-
-    componentDidMount(){
-        let url = 'https://my-json-server.typicode.com/eduardobvale/demo/rentals';
-        fetch(url)
-        .then((r)=>r.json())
-        .then((json)=>{
-          let state = this.state;
-          state.nutri = json;
-          this.setState(state);
-          console.log(json);
-        })
     
-    }      
+    componentDidMount(){
+      Axios.get('https://my-json-server.typicode.com/eduardobvale/demo/rentals')
+      .then((res)=>{
+        this.setState({nutri: res.data})
+      })
+  
+  }  
       
     render() {
         return (
