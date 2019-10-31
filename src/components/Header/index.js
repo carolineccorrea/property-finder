@@ -7,8 +7,12 @@ function Header() {
         <nav className="navbar navbar-expand-md navbar-light bg-light" style={{backgroundColor: '#e3f2fd'}}>
 
           <a className="navbar-brand" href="/#">
-          <img className="image-responsive" style={{maxWidth:'150px'}} src={logo} alt=""/>
-        </a>
+           <img className="image-responsive" style={{maxWidth:'150px'}} src={logo} alt=""/>
+          </a>
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar imóvel" aria-label="Search"/>
+            <button class="btn btn-outline-info" type="submit">Procurar</button>
+          </form>
 
          <section className="collapse navbar-collapse" id="navbarToggler">
           <div className="navbar-nav ml-auto">
